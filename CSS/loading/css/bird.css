@@ -1,0 +1,457 @@
+/*! HTML5 Boilerplate v5.0 | MIT License | http://h5bp.com/ */
+
+html {
+    color: #222;
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.browserupgrade {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+.credits {
+    position: absolute;
+    color: white;
+    bottom: 20px;
+    right: 20px;
+    z-index: 2000;
+}
+
+#loader-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+}
+
+#loader-wrapper .loader-section {
+    position: fixed;
+    top: 0;
+    width: 51%;
+    height: 100%;
+    background: #172036;
+    z-index: 1000;
+}
+
+#loader-wrapper .loader-section.section-left {
+    left: 0;
+}
+
+#loader-wrapper .loader-section.section-right {
+    right: 0;
+}
+
+#loader {
+    display: block;
+    position: relative;
+    left: 50%;
+    top: 50%;
+
+
+
+    z-index: 1001;
+}
+.circle-big{
+    position:absolute;
+    margin: -0.5em -1.55em auto;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    box-sizing: border-box;
+    border-width: 75px;
+    border-style: solid;
+    border-color: #6F2118 #6F2118 transparent transparent;
+    transform: rotate(45deg);
+    animation-name: spinReverse;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+
+}
+.circle-top-left{
+    position:absolute;
+    margin: 1em auto;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    box-sizing: border-box;
+    border-width: 50px;
+    border-style: solid;
+    border-color: transparent transparent transparent #F2CE5D;
+    transform: rotate(45deg);
+    animation-name: rotateInDownLeft;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    z-index: 1009;
+}
+.circle-top-right{
+    position:absolute;
+    margin: 1em auto;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    box-sizing: border-box;
+    border-width: 50px;
+    border-style: solid;
+    border-color: #ffffff #ffffff transparent transparent;
+    transform: rotate(45deg);
+    animation-name: spin;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+
+}
+.circle-bottom-right {
+    position:absolute;
+    margin: 1em auto;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    box-sizing: border-box;
+    border-width: 50px;
+    border-style: solid;
+    border-color: transparent #E7E7E7 transparent transparent;
+    transform: rotate(45deg);
+
+    animation-name: rotateInUpLeft;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+.circle-bottom-left {
+    position:absolute;
+    margin: 2.5em 1.6em auto;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    box-sizing: border-box;
+    border-width: 25px;
+    border-style: solid;
+    border-color: transparent transparent #EDA73B transparent;
+    transform: rotate(45deg);
+
+    animation-name: rotateInUpRight;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+.circle-eye {
+    position:absolute;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    background-color: black;
+    top: 41px;
+    /* left: 55px; */
+    z-index: 1010;
+    animation-name: eyeMove;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes eyeMove {
+    0% {
+        transform: translateX(50px);
+    }
+    25% {
+        transform: translateX(25px);
+    }
+    50% {
+        transform: translateX(25px);
+    }
+    75% {
+        transform: translateX(50px);
+    }
+    100% {
+        transform: translateX(50px);
+    }
+}
+
+@keyframes rotateInDownLeft {
+    0% {
+        transform: rotate(45deg);
+    }
+    25% {
+        transform: rotate(135deg);
+    }
+    50% {
+        transform: rotate(135deg);
+    }
+    75% {
+        transform: rotate(45deg);
+    }
+    100% {
+        transform: rotate(45deg);
+    }
+}
+
+@keyframes rotateInUpRight {
+    0% {
+        transform: rotate(45deg);
+    }
+    25% {
+        transform: rotate(-45deg);
+    }
+    50% {
+        transform: rotate(-45deg);
+    }
+    75% {
+        transform: rotate(45deg);
+    }
+    100% {
+        transform: rotate(45deg);
+    }
+}
+@keyframes rotateInUpLeft {
+    0% {
+        transform: rotate(45deg);
+    }
+    25% {
+        transform: rotate(135deg);
+    }
+    50% {
+        transform: rotate(135deg);
+    }
+    75% {
+        transform: rotate(45deg);
+    }
+    100% {
+        transform: rotate(45deg);
+    }
+}
+@keyframes spin {
+    0% {
+        transform: rotate(45deg);
+    }
+    25% {
+        transform: rotate(-135deg);
+    }
+    50% {
+        transform: rotate(-135deg);
+    }
+    75% {
+        transform: rotate(-315deg);
+    }
+    100% {
+        transform: rotate(-315deg);
+    }
+}
+@keyframes spinReverse {
+    0% {
+        transform: rotate(45deg);
+    }
+    25% {
+        transform: rotate(225deg);
+    }
+    50% {
+        transform: rotate(225deg);
+    }
+    75% {
+        transform: rotate(405deg);
+    }
+    100% {
+        transform: rotate(405deg);
+    }
+}
+
+/* Loaded */
+.loaded #loader-wrapper .loader-section.section-left {
+    -webkit-transform: translateX(-100%);  /* Chrome, Opera 15+, Safari 3.1+ */
+    -ms-transform: translateX(-100%);  /* IE 9 */
+    transform: translateX(-100%);  /* Firefox 16+, IE 10+, Opera */
+}
+
+.loaded #loader-wrapper .loader-section.section-right {
+    -webkit-transform: translateX(100%);  /* Chrome, Opera 15+, Safari 3.1+ */
+    -ms-transform: translateX(100%);  /* IE 9 */
+    transform: translateX(100%);  /* Firefox 16+, IE 10+, Opera */
+}
+.loaded #loader {
+    opacity: 0;
+}
+.loaded #loader-wrapper {
+    visibility: hidden;
+}
+.loaded #loader-wrapper .loader-section.section-right,
+.loaded #loader-wrapper .loader-section.section-left {
+
+    -webkit-transition: all 0.3s 0.3s ease-out;
+            transition: all 0.3s 0.3s ease-out;
+}
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+
+}
+
+@media print,
+       (-o-min-device-pixel-ratio: 5/4),
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 120dpi) {
+
+}
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+/* ==========================================================================
+   Print styles
+   ========================================================================== */
+
+@media print {
+    *,
+    *:before,
+    *:after {
+        background: transparent !important;
+        color: #000 !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    a[href^="#"]:after,
+    a[href^="javascript:"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group;
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
