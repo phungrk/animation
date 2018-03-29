@@ -16,18 +16,20 @@
 
         <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
     </head>
-    <body class="loading">
+    <body>
         <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
         <img src="img/bg1.jpg" />
+        <!-- loader animation -->
+        <div id="loader"></div>
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
 
         <script>
             $(window).on('load', function(){
                 setTimeout(()=> {
-                    $('body').removeClass('loading');
+                    $('#loader').css('animation', 'loaderDisapear 0.7s 1 alternate ease-in-out forwards');
                 }, 3000);
             })
         </script>

@@ -56,7 +56,7 @@ textarea {
    Author's custom styles
    ========================================================================== */
 /* overlay */
-.loading::before{
+#loader::before{
     content: '';
     position: fixed;
     z-index: 0;
@@ -67,7 +67,7 @@ textarea {
     background: #172036;
 }
 /* pulse animation */
-.loading::after {
+#loader::after {
 	content: '';
 	position: fixed;
 	z-index: 100000;
@@ -88,6 +88,12 @@ textarea {
 		opacity: 1;
 		transform: scale3d(0.5,0.5,1);
 	}
+}
+@keyframes loaderDisapear {
+    to {
+        opacity: 0;
+        z-index: -9999;
+    }
 }
 /* ==========================================================================
    Media Queries
